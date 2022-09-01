@@ -1,0 +1,20 @@
+[
+  {
+    "modid": "strangefuelsmod",
+    "name": "StrangeFuelsMod",
+    "description": "一个关于奇奇怪怪的燃料的模组。",
+    "version": "4.0release",
+    "credits": "BT",
+    "logoFile": "",
+    "mcversion": "1.12.2",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [
+      "BT"
+    ],
+    "dependencies": [],
+    "dependants": [],
+    "requiredMods": [],
+    "useDependencyInformation": "true"
+  }
+]

@@ -1,0 +1,2710 @@
+{
+  "net/mcreator/strangefuelsmod/ClientProxyStrangeFuelsMod": {
+    "name": "net/mcreator/strangefuelsmod/ClientProxyStrangeFuelsMod",
+    "interfaces": [
+      "net/mcreator/strangefuelsmod/IProxyStrangeFuelsMod"
+    ]
+  },
+  "net/mcreator/strangefuelsmod/ElementsStrangeFuelsMod": {
+    "name": "net/mcreator/strangefuelsmod/ElementsStrangeFuelsMod",
+    "interfaces": [
+      "net/minecraftforge/fml/common/IFuelHandler",
+      "net/minecraftforge/fml/common/IWorldGenerator"
+    ],
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPlayerLoggedIn(Lnet/minecraftforge/fml/common/gameevent/PlayerEvent$PlayerLoggedInEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onPlayerChangedDimension(Lnet/minecraftforge/fml/common/gameevent/PlayerEvent$PlayerChangedDimensionEvent;)V"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$GuiHandler": {
+    "name": "net/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$GuiHandler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/IGuiHandler"
+    ]
+  },
+  "net/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement": {
+    "name": "net/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement",
+    "interfaces": [
+      "java/lang/Comparable"
+    ]
+  },
+  "net/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag": {
+    "name": "net/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag",
+    "interfaces": [
+      "java/lang/annotation/Annotation"
+    ]
+  },
+  "net/mcreator/strangefuelsmod/ServerProxyStrangeFuelsMod": {
+    "name": "net/mcreator/strangefuelsmod/ServerProxyStrangeFuelsMod",
+    "interfaces": [
+      "net/mcreator/strangefuelsmod/IProxyStrangeFuelsMod"
+    ]
+  },
+  "net/mcreator/strangefuelsmod/StrangeFuelsMod": {
+    "name": "net/mcreator/strangefuelsmod/StrangeFuelsMod",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/common/Mod;",
+        "target": "net/mcreator/strangefuelsmod/StrangeFuelsMod",
+        "values": {
+          "acceptedMinecraftVersions": {
+            "value": "[1.12.2]"
+          },
+          "modid": {
+            "value": "strangefuelsmod"
+          },
+          "version": {
+            "value": "1.0.0"
+          }
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/SidedProxy;",
+        "target": "proxy",
+        "values": {
+          "clientSide": {
+            "value": "net.mcreator.strangefuelsmod.ClientProxyStrangeFuelsMod"
+          },
+          "serverSide": {
+            "value": "net.mcreator.strangefuelsmod.ServerProxyStrangeFuelsMod"
+          }
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$Instance;",
+        "target": "instance",
+        "value": {
+          "value": "strangefuelsmod"
+        }
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "preInit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "postInit(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "serverLoad(Lnet/minecraftforge/fml/common/event/FMLServerStartingEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "registerBlocks(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "registerItems(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "registerBiomes(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "registerEntities(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "registerPotions(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "registerSounds(Lnet/minecraftforge/event/RegistryEvent$Register;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "registerModels(Lnet/minecraftforge/client/event/ModelRegistryEvent;)V"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/StrangeFuelsModVariables$WorldSavedDataSyncMessage": {
+    "name": "net/mcreator/strangefuelsmod/StrangeFuelsModVariables$WorldSavedDataSyncMessage",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "net/mcreator/strangefuelsmod/StrangeFuelsModVariables$WorldSavedDataSyncMessageHandler": {
+    "name": "net/mcreator/strangefuelsmod/StrangeFuelsModVariables$WorldSavedDataSyncMessageHandler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "net/mcreator/strangefuelsmod/block/BlockHongwuzhikuai": {
+    "name": "net/mcreator/strangefuelsmod/block/BlockHongwuzhikuai",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/block/BlockHongwuzhikuai"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "block",
+        "value": {
+          "value": "strangefuelsmod:hongwuzhikuai"
+        }
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/creativetab/TabStrangeFuelsMod": {
+    "name": "net/mcreator/strangefuelsmod/creativetab/TabStrangeFuelsMod",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/creativetab/TabStrangeFuelsMod"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelAnwuzhi2": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelAnwuzhi2",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelAnwuzhi2"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelErchongyasuogaojimeitan2": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelErchongyasuogaojimeitan2",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelErchongyasuogaojimeitan2"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel1": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel1",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel1"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel10": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel10",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel10"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel100": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel100",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel100"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel101": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel101",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel101"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel102": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel102",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel102"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel103": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel103",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel103"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel104": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel104",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel104"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel105": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel105",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel105"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel106": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel106",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel106"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel107": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel107",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel107"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel108": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel108",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel108"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel109": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel109",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel109"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel11": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel11",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel11"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel110": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel110",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel110"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel111": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel111",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel111"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel112": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel112",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel112"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel113": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel113",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel113"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel114": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel114",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel114"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel115": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel115",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel115"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel116": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel116",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel116"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel117": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel117",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel117"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel118": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel118",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel118"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel119": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel119",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel119"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel12": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel12",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel12"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel120": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel120",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel120"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel121": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel121",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel121"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel122": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel122",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel122"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel123": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel123",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel123"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel124": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel124",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel124"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel125": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel125",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel125"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel126": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel126",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel126"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel127": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel127",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel127"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel128": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel128",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel128"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel129": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel129",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel129"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel13": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel13",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel13"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel130": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel130",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel130"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel131": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel131",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel131"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel132": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel132",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel132"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel133": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel133",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel133"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel134": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel134",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel134"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel135": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel135",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel135"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel136": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel136",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel136"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel137": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel137",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel137"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel138": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel138",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel138"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel139": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel139",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel139"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel14": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel14",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel14"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel140": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel140",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel140"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel141": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel141",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel141"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel142": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel142",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel142"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel143": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel143",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel143"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel144": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel144",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel144"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel145": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel145",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel145"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel146": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel146",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel146"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel147": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel147",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel147"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel148": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel148",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel148"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel149": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel149",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel149"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel15": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel15",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel15"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel150": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel150",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel150"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel151": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel151",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel151"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel152": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel152",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel152"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel153": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel153",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel153"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel154": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel154",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel154"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel155": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel155",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel155"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel156": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel156",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel156"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel157": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel157",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel157"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel158": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel158",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel158"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel159": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel159",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel159"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel16": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel16",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel16"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel160": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel160",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel160"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel161": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel161",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel161"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel162": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel162",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel162"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel163": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel163",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel163"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel164": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel164",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel164"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel165": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel165",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel165"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel166": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel166",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel166"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel167": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel167",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel167"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel168": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel168",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel168"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel169": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel169",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel169"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel17": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel17",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel17"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel170": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel170",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel170"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel171": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel171",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel171"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel172": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel172",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel172"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel173": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel173",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel173"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel174": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel174",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel174"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel175": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel175",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel175"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel176": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel176",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel176"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel177": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel177",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel177"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel178": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel178",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel178"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel179": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel179",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel179"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel18": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel18",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel18"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel180": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel180",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel180"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel181": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel181",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel181"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel182": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel182",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel182"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel183": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel183",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel183"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel184": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel184",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel184"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel185": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel185",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel185"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel186": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel186",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel186"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel187": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel187",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel187"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel188": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel188",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel188"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel189": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel189",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel189"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel19": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel19",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel19"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel190": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel190",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel190"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel191": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel191",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel191"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel192": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel192",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel192"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel193": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel193",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel193"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel194": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel194",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel194"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel195": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel195",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel195"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel196": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel196",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel196"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel197": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel197",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel197"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel198": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel198",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel198"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel199": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel199",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel199"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel2": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel2",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel2"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel20": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel20",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel20"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel200": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel200",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel200"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel201": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel201",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel201"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel202": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel202",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel202"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel203": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel203",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel203"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel204": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel204",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel204"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel205": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel205",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel205"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel206": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel206",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel206"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel207": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel207",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel207"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel208": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel208",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel208"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel209": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel209",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel209"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel21": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel21",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel21"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel210": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel210",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel210"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel211": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel211",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel211"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel212": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel212",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel212"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel22": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel22",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel22"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel23": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel23",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel23"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel24": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel24",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel24"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel25": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel25",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel25"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel26": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel26",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel26"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel27": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel27",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel27"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel28": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel28",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel28"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel29": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel29",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel29"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel3": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel3",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel3"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel30": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel30",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel30"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel31": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel31",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel31"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel32": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel32",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel32"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel33": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel33",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel33"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel34": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel34",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel34"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel35": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel35",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel35"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel36": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel36",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel36"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel37": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel37",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel37"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel38": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel38",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel38"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel39": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel39",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel39"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel4": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel4",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel4"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel40": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel40",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel40"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel41": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel41",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel41"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel42": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel42",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel42"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel43": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel43",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel43"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel44": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel44",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel44"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel45": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel45",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel45"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel46": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel46",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel46"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel47": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel47",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel47"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel48": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel48",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel48"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel49": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel49",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel49"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel5": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel5",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel5"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel50": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel50",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel50"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel51": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel51",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel51"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel52": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel52",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel52"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel53": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel53",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel53"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel54": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel54",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel54"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel55": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel55",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel55"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel56": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel56",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel56"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel57": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel57",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel57"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel58": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel58",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel58"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel59": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel59",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel59"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel6": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel6",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel6"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel60": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel60",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel60"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel61": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel61",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel61"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel62": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel62",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel62"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel63": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel63",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel63"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel64": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel64",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel64"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel65": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel65",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel65"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel66": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel66",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel66"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel67": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel67",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel67"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel68": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel68",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel68"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel69": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel69",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel69"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel7": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel7",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel7"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel70": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel70",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel70"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel71": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel71",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel71"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel72": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel72",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel72"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel73": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel73",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel73"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel74": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel74",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel74"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel75": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel75",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel75"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel76": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel76",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel76"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel77": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel77",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel77"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel78": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel78",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel78"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel79": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel79",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel79"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel8": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel8",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel8"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel80": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel80",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel80"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel81": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel81",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel81"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel82": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel82",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel82"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel83": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel83",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel83"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel84": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel84",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel84"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel85": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel85",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel85"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel86": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel86",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel86"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel87": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel87",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel87"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel88": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel88",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel88"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel89": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel89",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel89"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel9": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel9",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel9"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel90": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel90",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel90"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel91": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel91",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel91"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel92": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel92",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel92"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel93": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel93",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel93"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel94": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel94",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel94"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel95": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel95",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel95"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel96": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel96",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel96"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel97": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel97",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel97"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel98": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel98",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel98"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelFuel99": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelFuel99",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelFuel99"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelGaojimeitan2": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelGaojimeitan2",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelGaojimeitan2"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelHongwuzhi2": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelHongwuzhi2",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelHongwuzhi2"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelHongwuzhikuai2": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelHongwuzhikuai2",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelHongwuzhikuai2"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelLianjinmeitan2": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelLianjinmeitan2",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelLianjinmeitan2"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelMobiwusiranliao2": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelMobiwusiranliao2",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelMobiwusiranliao2"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelStarfuel2": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelStarfuel2",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelStarfuel2"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelYasuogaojimeitan1": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelYasuogaojimeitan1",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelYasuogaojimeitan1"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelYonghengranliao2": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelYonghengranliao2",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelYonghengranliao2"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/fuel/FuelZuanshimeitan2": {
+    "name": "net/mcreator/strangefuelsmod/fuel/FuelZuanshimeitan2",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/fuel/FuelZuanshimeitan2"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/item/ItemAnwuzhi": {
+    "name": "net/mcreator/strangefuelsmod/item/ItemAnwuzhi",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/item/ItemAnwuzhi"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "block",
+        "value": {
+          "value": "strangefuelsmod:anwuzhi"
+        }
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/item/ItemErchongyasuogaojimeitan": {
+    "name": "net/mcreator/strangefuelsmod/item/ItemErchongyasuogaojimeitan",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/item/ItemErchongyasuogaojimeitan"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "block",
+        "value": {
+          "value": "strangefuelsmod:erchongyasuogaojimeitan"
+        }
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/item/ItemGaojimeitan": {
+    "name": "net/mcreator/strangefuelsmod/item/ItemGaojimeitan",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/item/ItemGaojimeitan"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "block",
+        "value": {
+          "value": "strangefuelsmod:gaojimeitan"
+        }
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/item/ItemHongwuzhi": {
+    "name": "net/mcreator/strangefuelsmod/item/ItemHongwuzhi",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/item/ItemHongwuzhi"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "block",
+        "value": {
+          "value": "strangefuelsmod:hongwuzhi"
+        }
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/item/ItemLianjinmeitan": {
+    "name": "net/mcreator/strangefuelsmod/item/ItemLianjinmeitan",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/item/ItemLianjinmeitan"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "block",
+        "value": {
+          "value": "strangefuelsmod:lianjinmeitan"
+        }
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/item/ItemMobiwusiranliao": {
+    "name": "net/mcreator/strangefuelsmod/item/ItemMobiwusiranliao",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/item/ItemMobiwusiranliao"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "block",
+        "value": {
+          "value": "strangefuelsmod:mobiwusiranliao"
+        }
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/item/ItemSinkiller": {
+    "name": "net/mcreator/strangefuelsmod/item/ItemSinkiller",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/item/ItemSinkiller"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "block",
+        "value": {
+          "value": "strangefuelsmod:sinkiller"
+        }
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/item/ItemSpitefulFox": {
+    "name": "net/mcreator/strangefuelsmod/item/ItemSpitefulFox",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/item/ItemSpitefulFox"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "block",
+        "value": {
+          "value": "strangefuelsmod:spitefulfox"
+        }
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/item/ItemStarfuel": {
+    "name": "net/mcreator/strangefuelsmod/item/ItemStarfuel",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/item/ItemStarfuel"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "block",
+        "value": {
+          "value": "strangefuelsmod:starfuel"
+        }
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/item/ItemTEBSTT": {
+    "name": "net/mcreator/strangefuelsmod/item/ItemTEBSTT",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/item/ItemTEBSTT"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "block",
+        "value": {
+          "value": "strangefuelsmod:tebstt"
+        }
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/item/ItemYanjiangmeitanhunhewu": {
+    "name": "net/mcreator/strangefuelsmod/item/ItemYanjiangmeitanhunhewu",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/item/ItemYanjiangmeitanhunhewu"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "block",
+        "value": {
+          "value": "strangefuelsmod:yanjiangmeitanhunhewu"
+        }
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/item/ItemYasuogaojimeitan": {
+    "name": "net/mcreator/strangefuelsmod/item/ItemYasuogaojimeitan",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/item/ItemYasuogaojimeitan"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "block",
+        "value": {
+          "value": "strangefuelsmod:yasuogaojimeitan"
+        }
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/item/ItemYonghengranliao": {
+    "name": "net/mcreator/strangefuelsmod/item/ItemYonghengranliao",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/item/ItemYonghengranliao"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "block",
+        "value": {
+          "value": "strangefuelsmod:yonghengranliao"
+        }
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/item/ItemZuanshimeitan": {
+    "name": "net/mcreator/strangefuelsmod/item/ItemZuanshimeitan",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/item/ItemZuanshimeitan"
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/registry/GameRegistry$ObjectHolder;",
+        "target": "block",
+        "value": {
+          "value": "strangefuelsmod:zuanshimeitan"
+        }
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/item/crafting/RecipeFuroushaopige": {
+    "name": "net/mcreator/strangefuelsmod/item/crafting/RecipeFuroushaopige",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/item/crafting/RecipeFuroushaopige"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/item/crafting/RecipeGanzheshaozhi": {
+    "name": "net/mcreator/strangefuelsmod/item/crafting/RecipeGanzheshaozhi",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/item/crafting/RecipeGanzheshaozhi"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/item/crafting/RecipeMutan": {
+    "name": "net/mcreator/strangefuelsmod/item/crafting/RecipeMutan",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/item/crafting/RecipeMutan"
+      }
+    ]
+  },
+  "net/mcreator/strangefuelsmod/item/crafting/RecipeZuanshi": {
+    "name": "net/mcreator/strangefuelsmod/item/crafting/RecipeZuanshi",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/mcreator/strangefuelsmod/ElementsStrangeFuelsMod$ModElement$Tag;",
+        "target": "net/mcreator/strangefuelsmod/item/crafting/RecipeZuanshi"
+      }
+    ]
+  }
+}
